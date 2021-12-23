@@ -9,6 +9,7 @@ import com.paul.mvc.annotation.RequestMapping;
 import com.paul.mvc.annotation.RequestParam;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.handler.codec.http.FullHttpResponse;
+import org.test.demo.Service.UserServiceImpl;
 
 @Controller
 @RequestMapping("/user")
@@ -24,6 +25,7 @@ public class UserController {
         System.out.println(request);
         System.out.println(id);
         System.out.println(name);
+        System.out.println(userService);
         String res = userService.getUser(id);
         return HttpUtil.constructText(res);
     }
